@@ -1,14 +1,14 @@
 class Ball {
   //declaring all information (fields) contained within the Ball class
   PVector loc, vel;
-  int diam;
+  float diam;
   color c;
 
   //this is a constructor. you can have more than one constructor for a given class
-  Ball() {
-    diam = 200;
+  Ball(float tDiam, float r, float g, float b) {
+    diam = tDiam;
     loc = new PVector(random(diam, width-diam), random(diam, height-diam));
-    c = color(random(255), random(50), random(100, 255));
+    c = color(r, g, b);
     vel = new PVector(random(0, 10), random(0, 10));
   }
 
